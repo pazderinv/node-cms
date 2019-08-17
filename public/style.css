@@ -1,0 +1,36 @@
+body {
+	font-size: 16px;
+}
+.col-bg-1 {
+	background-color: #f7f1e3;
+	border: 1px solid #d1ccc0;
+}
+
+.col-bg-2 {
+	background-color: #485460;
+
+}
+
+.main {
+	padding: 40px 30px 30px 30px;
+}
+
+.left-sb h5 {
+	padding: 40px 0 0 0;
+	text-transform: uppercase;
+	color: #444;
+	font-size: 16px;
+}
+
+.main h5 {
+
+	text-transform: uppercase;
+	color: #444;
+	font-size: 16px;
+}
+
+.left-sb ul {
+	background-color: #f1f2f6;
+	padding: 15px 15px 15px 40px;
+	border-radius: 5px;
+}

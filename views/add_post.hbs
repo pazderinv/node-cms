@@ -1,0 +1,57 @@
+
+        <div class="col-12 col-md-8">
+          <div class="main">
+            <h5>Добавление Статьи</h5>
+           <form>
+              <div class="form-group">
+                <label for="title-post">Заголовок</label>
+                <input name="title-post" type="text" class="form-control" id="title-post" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="cat-post">Рубрика</label><br>
+                <select name="cat-post" id="cat-post">
+                  <option value="">Lorem ipsum dolor</option>
+                  <option value="">Lorem ipsum dolor</option>
+                  <option value="">Lorem ipsum dolor</option>
+                  <option value="">Lorem ipsum dolor</option>
+                  <option value="">Lorem ipsum dolor</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="uri-post">Ссылка</label>
+                <input name="uri-post" type="text" class="form-control" id="uri-post" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="date-post">Дата добавления</label>
+                <input type="date" name="date-post" class="form-control" id="date-post"  placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="text-post">Текст</label>
+                <textarea name="text-post" class="form-control" id="text-post" rows="3"></textarea>
+              </div>
+               <button id="addpost-submit" name="add-submit" class="btn btn-primary" type="submit">Submit form</button>
+            </form>
+          </div>
+        </div>
+
+    <script src="/ckeditor/ckeditor.js"></script>
+    <script>
+      $(document).ready(function(){
+        CKEDITOR.replace( 'text-post' );
+        CKEDITOR.editorConfig = function( config ) {
+          // Define changes to default configuration here. For example:
+          // config.language = 'fr';
+          // config.uiColor = '#AADC6E';
+          config.extraPlugins = 'image';
+        };
+        $('#addpost-submit').on('click', function(e){
+          var textEdit = CKEDITOR.instances['text-post'].getData()
+          alert(textEdit);
+          return false;
+        });
+        //alert(1);
+      });
+    </script>
+
+  </body>
+</html>
